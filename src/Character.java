@@ -5,7 +5,7 @@ public class Character
 	private int xPosition;
 	private int yPosition;
 	private int health;
-	private int radius;		//Won't need this later, 'cause the character won't be a circle! OR WILL IT BE?!?!
+	private int radius;	
 	private int speed = 10;
 	
 	private Driver driver;
@@ -16,7 +16,7 @@ public class Character
 	public static final int DOWN = 3;
 	
 
-	public Character(int xPosition, int yPosition, int health, int radius, Driver driver) //Maybe this isn't the best way to get myself the driver object 
+	public Character(int xPosition, int yPosition, int health, int radius, Driver driver) //Maybe there is a better way to get a reference to the driver object 
 	{
 		this.xPosition = xPosition;
 		this.yPosition = yPosition;
@@ -66,7 +66,7 @@ public class Character
 
 		}
 		
-		if(driver.downPressed && !groundCollision)		//Make is so that if there is a collision the circle is moved up so that it sits just above the ground. 
+		if(driver.downPressed && !groundCollision)//Make is so that if there is a collision the circle is moved up so that it sits just above the ground. 
 		{
 			move(Character.DOWN);
 
